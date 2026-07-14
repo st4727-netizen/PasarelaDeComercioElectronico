@@ -10,14 +10,14 @@ const {
     deletePremium
 } = require("../controllers/premium.controller");
 
-router.post("/", createPremium);
+router.post("/premium", createPremium);
 
-router.get("/", getPremiums);
+router.get("/premium", getPremiums);
 
-router.get("/:id", getPremiumById);
+router.get("/premium/:id", getPremiumById);
 
-router.put("/:id", updatePremium);
+router.put("/premium/:id", updatePremium);
 
-router.delete("/:id", deletePremium);
+router.delete("/premium/:id", deletePremium);
 
 module.exports = router;

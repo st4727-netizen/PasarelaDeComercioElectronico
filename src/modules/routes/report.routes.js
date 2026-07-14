@@ -10,14 +10,14 @@ const {
     deleteReport
 } = require("../controllers/report.controller");
 
-router.post("/", createReport);
+router.post("/report", createReport);
 
-router.get("/", getReports);
+router.get("/report", getReports);
 
-router.get("/:id", getReportById);
+router.get("/report/:id", getReportById);
 
-router.put("/:id", updateReport);
+router.put("/report/:id", updateReport);
 
-router.delete("/:id", deleteReport);
+router.delete("/report/:id", deleteReport);
 
 module.exports = router;

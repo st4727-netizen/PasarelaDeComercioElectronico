@@ -10,14 +10,14 @@ const {
     deletePayment
 } = require("../controllers/payment.controller");
 
-router.post("/", createPayment);
+router.post("/payment", createPayment);
 
-router.get("/", getPayments);
+router.get("/payment", getPayments);
 
-router.get("/:id", getPaymentById);
+router.get("/payment/:id", getPaymentById);
 
-router.put("/:id", updatePayment);
+router.put("/payment/:id", updatePayment);
 
-router.delete("/:id", deletePayment);
+router.delete("/payment/:id", deletePayment);
 
 module.exports = router;
