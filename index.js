@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const connectDB = require("./src/config/db");
+const validateAppToken = require("./src/middlewares/appToken.middleware");
 
 const userRoutes = require("./src/modules/routes/user.routes");
 const bookRoutes = require("./src/modules/routes/book.routes");
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
     });
 });
 
+app.use(validateAppToken);
 // ROUTES
 
 app.use("/api/users", userRoutes);
