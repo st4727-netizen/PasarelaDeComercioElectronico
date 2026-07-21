@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const connectDB = require("./src/config/db");
 const validateAppToken = require("./src/middlewares/appToken.middleware");
+const helmet = require("helmet");
 
 const userRoutes = require("./src/modules/routes/user.routes");
 const bookRoutes = require("./src/modules/routes/book.routes");
@@ -13,6 +14,8 @@ const premiumRoutes = require("./src/modules/routes/premium.routes");
 const reportRoutes = require("./src/modules/routes/report.routes");
 
 const app = express();
+
+app.use(helmet());
 
 app.use(express.json());
 
